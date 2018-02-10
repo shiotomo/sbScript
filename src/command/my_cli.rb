@@ -20,12 +20,14 @@ class MyCLI
       end
 
       case gets.chomp.to_i
+      # クローンをスタートする
       when 1
-        puts "1番が選ばれました"
-        @cron.start
+        @cron.create
+      # クローンの設定をする
       when 2
         puts "2番が選ばれました"
         @cron.setting
+      # クローンの情報を表示する
       when 3
         @cron.information
       else
