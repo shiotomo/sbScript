@@ -8,5 +8,5 @@ sbScriptはサーバのバックアップを簡単に行えるツールです。
 
 ## 使い方
 ```
-ruby sbscript
+ruby sbScript.rb
 ```
