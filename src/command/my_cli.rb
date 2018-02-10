@@ -27,7 +27,6 @@ class MyCLI
         puts "2番が選ばれました"
         @cron.setting
       when 3
-        puts "3番が選ばれました"
         @cron.information
       else
         puts "exit"
@@ -42,8 +41,8 @@ class MyCLI
   #  画面に表示するプロンプトの設定メソッド
   def prompt
     puts "== Prompt Info =="
-    puts "1       : Cron"
-    puts "2       : Cron setting"
+    puts "1       : Start cron"
+    puts "2       : Setting cron"
     puts "3       : Cron information"
     puts "another : exit"
     puts "=================\n"

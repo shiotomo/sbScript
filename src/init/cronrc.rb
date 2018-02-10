@@ -11,6 +11,9 @@ class Cronrc
     File.open("settings/cronrc.json") do |file|
       @cron_setting = JSON.load(file)
     end
+    if @cron_setting["directory"] == "default"
+      @cron_setting["directory"] = "cron" + Date.today.to_s
+    end
   end
 
   # 設定を公開するメソッド
