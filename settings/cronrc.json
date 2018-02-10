@@ -1,0 +1,5 @@
+{
+  "root_directory": "backup",
+  "directory": "cron",
+  "sudo" : true
+}

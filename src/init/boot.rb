@@ -11,6 +11,7 @@ class Boot
     puts "== File setting =="
     puts "--> Message : Create backup-list.txt" unless is_create_file
     puts ""
+
     puts "== Directory setting =="
     puts "--> Message : Create backup" unless is_create_directory
     puts ""
