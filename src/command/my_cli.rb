@@ -23,12 +23,8 @@ class MyCLI
       # クローンをスタートする
       when 1
         @cron.create
-      # クローンの設定をする
-      when 2
-        puts "2番が選ばれました"
-        @cron.setting
       # クローンの情報を表示する
-      when 3
+      when 2
         @cron.information
       else
         puts "exit"
@@ -44,8 +40,7 @@ class MyCLI
   def prompt
     puts "== Prompt Info =="
     puts "1       : Start cron"
-    puts "2       : Setting cron"
-    puts "3       : Cron information"
+    puts "2       : Cron information"
     puts "another : exit"
     puts "=================\n"
     print "Exec number >> "

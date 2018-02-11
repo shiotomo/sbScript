@@ -18,10 +18,8 @@ class Cron
         backup(path)
       end
     end
-  end
 
-  # cronの設定を変更する
-  def setting
+    puts "Finish"
   end
 
   # cronrc.jsonの状態を出力
@@ -54,6 +52,5 @@ class Cron
     rescue
       puts "Fail"
     end
-
   end
 end
