@@ -1,6 +1,8 @@
 # == Cronクラス ==
 
 # require
+require "fileutils"
+
 require_relative "../init/cronrc"
 
 class Cron
@@ -10,8 +12,6 @@ class Cron
 
   # cronを作成
   def create
-    backup = @cronrc.information
-
     # backup-data.txtからpathを取得
     File.open("backup-list.txt", "r") do |file|
       file.each do |path|
@@ -42,7 +42,18 @@ class Cron
   # 引数について
   # path : バックアップをとるディレクトリのパス
   def backup(path)
-    puts path
-    # ここを作成していく
+    info = @cronrc.information
+    backup = info["root_directory"] + "/" + info["directory"]
+
+    # 保存するパスの表示
+    puts "Backup directory path => " + path
+
+    begin
+      FileUtils.cp_r(path.chomp, backup)
+      puts "Success!!"
+    rescue
+      puts "Fail"
+    end
+
   end
 end

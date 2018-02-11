@@ -12,6 +12,7 @@ def main
   boot = Boot.new
   terminal = MyCLI.new
 
+  # 起動時読み込み
   boot.load
 
   puts "== START TERMINAL =="
